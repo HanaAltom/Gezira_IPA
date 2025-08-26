@@ -55,9 +55,9 @@ with col1:
 with col2:
 	
 	st.write ('')
-
 	st.write('')
 	st.write('')
 		
 	st.image("D:\WaPOR Data download - netCDF format-20250213\Sudan_training_modify_upload\IPA_Gezira_v3-main\data\Gezira_Scheme.png", caption="Gezira Scheme Divisions", width=400)
+
 
