@@ -23,6 +23,21 @@ shapefile_path = r"data/Gezira_IR.json"
 with st.sidebar:
 
     st.logo(logo_wide, size="large", link='https://www.un-ihe.org/', icon_image=logo_small)
+    if st.button("العربية"):
+        st.session_state.language = "Arabic"
+    if st.button("English"):
+        st.session_state.language = "English"
+
+if st.session_state.get("language", "Arabic") == "English":
+    support_arabic_text(all=False)
+    text = english_txt
+else:
+    support_arabic_text(all=True)
+    text = arabic_txt
+
+st.markdown(text, unsafe_allow_html=True)
+
+
 
 # Dashboard Main Panel
 
@@ -59,5 +74,6 @@ with col2:
 	st.write('')
 		
 	st.image("D:\WaPOR Data download - netCDF format-20250213\Sudan_training_modify_upload\IPA_Gezira_v3-main\data\Gezira_Scheme.png", caption="Gezira Scheme Divisions", width=400)
+
 
 
